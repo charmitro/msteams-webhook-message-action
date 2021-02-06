@@ -1,5 +1,7 @@
 name: MSTeams Webhook message
 description: Sends message to channels Webhook
+  color: blue
+  icon: bell
 inputs:
   WEBHOOK_URL:
     description: eg. 123123-dasdasd2312-21312dasb/IncomingWebhook/1231231gfdgd/123123sadas123
