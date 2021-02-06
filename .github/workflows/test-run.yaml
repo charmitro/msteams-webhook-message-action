@@ -6,7 +6,7 @@ on:
 jobs:
   test-deployment:
     runs-on: ubuntu-latest
-    name: test go emailnotifier
+    name: test go msteams webhook
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v2
@@ -15,6 +15,6 @@ jobs:
         uses: ./
         id: testrun
         env:
-          WEBHOOK_URL:
+          WEBHOOK_URL: ""
           TITLE: "Test"
           MESSAGE: "Test message from GitHub action."

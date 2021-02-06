@@ -8,6 +8,11 @@ import (
 )
 
 func main() {
+
+	if len(os.Getenv("WEBHOOK_URL")) == 0 {
+		panic("Please provide WEBHOOK_URL environment variable in your GitHub action.")
+	}
+
 	err := sendTheMessage()
 	if err != nil {
 		panic(err.Error())
