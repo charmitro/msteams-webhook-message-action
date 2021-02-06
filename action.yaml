@@ -1,5 +1,7 @@
 name: MSTeams Webhook message
 description: Sends message to channels Webhook
+author: Charalampos Mitrodimas
+branding:
   color: blue
   icon: bell
 inputs:
