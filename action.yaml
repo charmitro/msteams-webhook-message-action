@@ -1,0 +1,26 @@
+name: MSTeams Webhook message
+description: Sends message to channels Webhook
+author: Charalampos Mitrodimas
+branding:
+  color: blue
+  icon: bell
+inputs:
+  WEBHOOK_URL:
+    description: eg. 123123-dasdasd2312-21312dasb/IncomingWebhook/1231231gfdgd/123123sadas123
+    required: true
+    default: ""
+  TITLE:
+    description: Title of MessageCard
+    required: true
+    default: TITLE
+  MESSAGE:
+    description: Message of MessageCard
+    required: true
+    default: MESSAGE
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.MESSAGE }}
+    - ${{ inputs.TITLE }}
+    - ${{ inputs.MESSAGE }}

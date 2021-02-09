@@ -1,0 +1,20 @@
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  test-deployment:
+    runs-on: ubuntu-latest
+    name: test go msteams webhook
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+
+      - name: test message
+        uses: ./
+        id: testrun
+        env:
+          WEBHOOK_URL: ""
+          TITLE: "Test"
+          MESSAGE: "Test message from GitHub action."
