@@ -5,6 +5,8 @@ ARG WEBHOOK_URL
 ARG TITLE
 ARG MESSAGE
 
+RUN apk add gcc  g++
+
 ENV GO11MODULE=on
 
 WORKDIR /app
